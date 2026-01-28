@@ -1,110 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Thesis Editor</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #0f2027;
-            color: #e0e0e0;
-            line-height: 1.8;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #38ef7d;
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-        }
-        .updated {
-            color: #666;
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #fff;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-        p {
-            margin-bottom: 15px;
-            color: #b0b0b0;
-        }
-        ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
-            color: #b0b0b0;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: #38ef7d;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .back {
-            display: inline-block;
-            margin-top: 40px;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Thesis Editor</title>
+  <meta name="description" content="Privacy policy for Thesis Editor. We don't collect your data or read your documents externally. Your work stays private in your Google Drive.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #38ef7d;
+      --primary-dark: #2dd36f;
+      --primary-light: #e8fdf0;
+      --dark: #0f2027;
+      --dark-lighter: #1a3a47;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--dark);
+      color: #e0e0e0;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      background: rgba(15, 32, 39, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1a3a47;
+      padding: 18px 30px;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .header-nav a {
+      margin-left: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #888;
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Breadcrumb Bar */
+    .breadcrumb-bar {
+      background: var(--dark-lighter);
+      padding: 14px 30px;
+    }
+
+    .breadcrumb-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .breadcrumb-content a {
+      color: var(--primary);
+      transition: opacity 0.2s;
+    }
+
+    .breadcrumb-content a:hover {
+      opacity: 0.8;
+    }
+
+    .breadcrumb-content .separator {
+      color: #555;
+    }
+
+    .breadcrumb-content .current {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Page Content */
+    .page-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 30px 80px;
+    }
+
+    .page-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    /* Summary Card */
+    .summary-card {
+      background: var(--dark-lighter);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 50px;
+      border-left: 4px solid var(--primary);
+      text-align: center;
+    }
+
+    .summary-card p {
+      font-size: 15px;
+      color: #b0d9c0;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      border-left: 3px solid var(--primary);
+      color: #fff;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: #a0a0a0;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .section h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #e0e0e0;
+    }
+
+    /* Access Cards */
+    .access-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .access-card {
+      background: var(--dark-lighter);
+      border-radius: 10px;
+      padding: 24px;
+      border: 1px solid #2a4a57;
+    }
+
+    .access-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .access-card p {
+      font-size: 13px;
+      color: #a0a0a0;
+      margin-bottom: 10px;
+    }
+
+    .access-card .scope {
+      font-size: 12px;
+      color: #707070;
+      background: rgba(0,0,0,0.3);
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+    }
+
+    .access-card .scope strong {
+      color: #909090;
+    }
+
+    /* No Collection List */
+    .no-collect {
+      background: var(--dark-lighter);
+      border-radius: 10px;
+      padding: 24px;
+      border: 1px solid #2a4a57;
+      margin-top: 20px;
+    }
+
+    .no-collect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .no-collect-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #a0a0a0;
+    }
+
+    .no-collect-item::before {
+      content: "✗";
+      color: #555;
+      font-weight: 600;
+    }
+
+    /* Retention Card */
+    .retention-card {
+      background: var(--dark-lighter);
+      border-radius: 10px;
+      padding: 24px;
+      border: 1px solid #2a4a57;
+      margin-top: 20px;
+    }
+
+    .retention-card ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .retention-card li {
+      font-size: 13px;
+      color: #a0a0a0;
+      margin-bottom: 8px;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: var(--dark-lighter);
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 50px;
+      border: 1px solid #2a4a57;
+    }
+
+    .contact-card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+      border: none;
+      padding: 0;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 0;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Link styling */
+    .page-content a {
+      color: var(--primary);
+    }
+
+    .page-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-lighter);
+      color: #fff;
+      padding: 50px 30px;
+      border-top: 1px solid #2a4a57;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 22px;
+    }
+
+    .footer-nav {
+      margin-bottom: 22px;
+    }
+
+    .footer-nav a {
+      color: #888;
+      margin: 0 14px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover {
+      color: #fff;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header-content {
+        padding: 15px 20px;
+      }
+
+      .header-nav a {
+        margin-left: 18px;
+        font-size: 12px;
+      }
+
+      .breadcrumb-bar {
+        padding: 14px 20px;
+      }
+
+      .page-content {
+        padding: 40px 20px 60px;
+      }
+
+      .page-title {
+        font-size: 26px;
+      }
+
+      .no-collect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: January 2025</p>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">Thesis Editor</a>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
 
-        <h2>Introduction</h2>
-        <p>Thesis Editor ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our Google Docs add-on.</p>
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-content">
+      <a href="index.html">Home</a>
+      <span class="separator">-></span>
+      <span class="current">Privacy Policy</span>
+    </div>
+  </div>
 
-        <h2>Information We Collect</h2>
-        <p>Thesis Editor accesses only the content of the Google Document you are currently working on. We collect:</p>
-        <ul>
-            <li><strong>Document Content:</strong> We read your document content solely to provide formatting, word count, and section navigation features. This data is processed locally and is not transmitted to external servers.</li>
-            <li><strong>Document Properties:</strong> We store your references and preferences in the document's properties, which remain within your Google account.</li>
-        </ul>
+  <main>
+    <div class="page-content">
 
-        <h2>How We Use Your Information</h2>
-        <p>We use the accessed information exclusively to:</p>
-        <ul>
-            <li>Display section navigation and word counts</li>
-            <li>Apply academic formatting to your document</li>
-            <li>Store and retrieve your reference list</li>
-            <li>Export your document as PDF</li>
-        </ul>
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="last-updated">Last updated: January 2026</p>
 
-        <h2>Data Storage</h2>
-        <p>Thesis Editor does not store any of your data on external servers. All data remains within your Google account and the document itself. Reference information is stored in the document's properties.</p>
+      <div class="summary-card">
+        <p>Thesis Editor does not collect, store, or transmit any personal data to external servers. All data stays within your Google account.</p>
+      </div>
 
-        <h2>Data Sharing</h2>
-        <p>We do not sell, trade, or otherwise transfer your information to third parties. Your document content never leaves Google's servers through our add-on.</p>
+      <div class="section">
+        <h2>Information We Access</h2>
+        <p>To provide its functionality, Thesis Editor requires access to:</p>
 
-        <h2>Google API Services</h2>
-        <p>Thesis Editor's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <div class="access-grid">
+          <div class="access-card">
+            <h3>1. Current Google Document</h3>
+            <p>We access the content of your open document to provide formatting, word count, section navigation, and reference management features.</p>
+            <div class="scope"><strong>Scope:</strong> Limited to the document you have open. We cannot access other documents.</div>
+          </div>
 
-        <h2>Security</h2>
-        <p>We implement appropriate security measures to protect your information. Since all data processing occurs within Google's infrastructure, your data benefits from Google's security measures.</p>
+          <div class="access-card">
+            <h3>2. Google Drive (Export)</h3>
+            <p>When you export, we create PDF files in your Drive.</p>
+            <div class="scope"><strong>Scope:</strong> We only create new files. We don't read, modify, or delete other files.</div>
+          </div>
 
+          <div class="access-card">
+            <h3>3. User Interface</h3>
+            <p>We display a sidebar within Google Docs. This is a standard add-on capability.</p>
+            <div class="scope"><strong>Scope:</strong> Standard Google Workspace add-on behavior.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Information We Store</h2>
+
+        <h3>User Preferences</h3>
+        <p>Settings like formatting options are stored via Google's PropertiesService, within Google's infrastructure, associated with your account, not accessible to us.</p>
+
+        <h3>Document-Specific Data</h3>
+        <p>Info like your reference list and section structure is stored in the document's properties. This data travels with the document and is only accessible to users with document access.</p>
+      </div>
+
+      <div class="section">
+        <h2>What We Don't Collect</h2>
+        <div class="no-collect">
+          <div class="no-collect-grid">
+            <div class="no-collect-item">Document content to external servers</div>
+            <div class="no-collect-item">Your documents outside Google</div>
+            <div class="no-collect-item">Personal info (name, email)</div>
+            <div class="no-collect-item">Analytics or tracking</div>
+            <div class="no-collect-item">Third-party data sharing</div>
+            <div class="no-collect-item">Advertising data</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Google User Data Retention</h2>
+        <div class="retention-card">
+          <p><strong>What Google data we access:</strong> Thesis Editor only accesses Google user data during active use of the add-on. This includes the content of your currently open Google Document and your Google Drive (solely to create export files you request).</p>
+
+          <p><strong>How long we retain Google user data:</strong></p>
+          <ul>
+            <li><strong>Document content:</strong> We do not retain or store your document content. It is accessed in real-time, processed locally within Google's infrastructure, and never transmitted to external servers.</li>
+            <li><strong>User preferences:</strong> Stored via Google's PropertiesService within your Google account. Retained until you uninstall the add-on.</li>
+            <li><strong>Document metadata:</strong> Settings specific to a document (like reference lists) are stored in the document's own properties and retained as long as the document exists.</li>
+          </ul>
+
+          <p><strong>We do not retain:</strong> Copies of your documents, document content on external servers, access tokens beyond the active session, or any Google user data outside of Google's infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Google User Data Deletion</h2>
+        <div class="retention-card">
+          <p><strong>Your right to deletion:</strong> You can delete all Google user data associated with Thesis Editor at any time.</p>
+
+          <p><strong>How to delete your Google user data:</strong></p>
+          <ul>
+            <li><strong>Revoke access entirely:</strong> Go to <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Permissions</a> and remove Thesis Editor. This immediately revokes all access and deletes all stored preferences.</li>
+            <li><strong>Delete document-specific data:</strong> Delete the Google Document itself, or copy its content to a new document (document properties do not transfer).</li>
+            <li><strong>Request assistance:</strong> Contact us at <a href="mailto:contact@thesiseditor.app">contact@thesiseditor.app</a>. We will provide guidance to ensure all associated data is removed within 30 days.</li>
+          </ul>
+
+          <p><strong>What happens when you revoke access:</strong> When you remove Thesis Editor from your Google account, all user preferences are immediately deleted. We lose all ability to access your Google Docs or Drive. No residual data remains on any external server because we do not operate external servers.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Data Security</h2>
+        <p>All data remains within Google's infrastructure, protected by Google's security measures. We don't operate external servers, so we cannot be a point of data breach.</p>
+      </div>
+
+      <div class="section">
+        <h2>Google API Compliance</h2>
+        <p>Thesis Editor's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including Limited Use requirements.</p>
+      </div>
+
+      <div class="section">
         <h2>Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+      </div>
 
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:contact@thesiseditor.app">contact@thesiseditor.app</a></p>
+      <div class="contact-card">
+        <h2>Questions?</h2>
+        <p>Contact us at <a href="mailto:contact@thesiseditor.app">contact@thesiseditor.app</a></p>
+      </div>
 
-        <a href="/" class="back">&larr; Back to Thesis Editor</a>
     </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">Thesis Editor</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+      <p class="footer-copy">© 2026 Thesis Editor. Made for academics.</p>
+    </div>
+  </footer>
 </body>
 </html>
