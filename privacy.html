@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Thesis Editor</title>
+  <title>Privacy Policy — Thesis Editor for Google Docs</title>
   <meta name="description" content="Privacy policy for Thesis Editor. We don't collect your data or read your documents externally. Your work stays private in your Google Drive.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
     * {
@@ -15,18 +15,20 @@
     }
 
     :root {
-      --primary: #38ef7d;
-      --primary-dark: #2dd36f;
-      --primary-light: #e8fdf0;
-      --dark: #0f2027;
-      --dark-lighter: #1a3a47;
+      --green: #2ECC9B;
+      --green-dark: #25A97F;
+      --green-light: #E8F8F3;
+      --dark: #0f1419;
+      --text-light: #faf8f5;
+      --text-dark: #1a1a2e;
+      --text-muted: #5f6368;
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--dark);
-      color: #e0e0e0;
-      line-height: 1.7;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8faf9 0%, #f0f5f3 100%);
+      color: var(--text-dark);
+      line-height: 1.6;
       font-size: 15px;
     }
 
@@ -35,44 +37,66 @@
       text-decoration: none;
     }
 
-    /* Header */
     header {
-      background: rgba(15, 32, 39, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #1a3a47;
-      padding: 18px 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 20, 25, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(46, 204, 155, 0.15);
+      z-index: 100;
     }
 
     .header-content {
       max-width: 1100px;
       margin: 0 auto;
+      padding: 18px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
+      position: relative;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 18px;
       font-weight: 700;
-      color: var(--primary);
+      letter-spacing: 2px;
+      color: var(--text-light);
+      cursor: pointer;
     }
+
+    .logo .cursor { color: var(--green); }
+
+    .logo .full-name {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .logo:hover .mark { opacity: 0; }
+    .logo:hover .full-name { opacity: 1; }
 
     .header-nav a {
       margin-left: 30px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
-      color: #888;
+      color: rgba(250, 248, 245, 0.5);
       transition: color 0.2s;
     }
 
-    .header-nav a:hover {
-      color: var(--primary);
-    }
+    .header-nav a:hover { color: var(--green); }
 
-    /* Breadcrumb Bar */
     .breadcrumb-bar {
-      background: var(--dark-lighter);
+      background: var(--dark);
       padding: 14px 30px;
+      margin-top: 60px;
     }
 
     .breadcrumb-content {
@@ -85,24 +109,14 @@
     }
 
     .breadcrumb-content a {
-      color: var(--primary);
+      color: var(--green);
       transition: opacity 0.2s;
     }
 
-    .breadcrumb-content a:hover {
-      opacity: 0.8;
-    }
+    .breadcrumb-content a:hover { opacity: 0.8; }
+    .breadcrumb-content .separator { color: #555; }
+    .breadcrumb-content .current { color: #fff; font-weight: 600; }
 
-    .breadcrumb-content .separator {
-      color: #555;
-    }
-
-    .breadcrumb-content .current {
-      color: #fff;
-      font-weight: 600;
-    }
-
-    /* Page Content */
     .page-content {
       max-width: 800px;
       margin: 0 auto;
@@ -110,52 +124,52 @@
     }
 
     .page-title {
-      font-size: 32px;
-      font-weight: 700;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 500;
       margin-bottom: 8px;
-      color: #fff;
+      color: var(--text-dark);
     }
 
     .last-updated {
       font-size: 13px;
-      color: #666;
+      color: var(--text-muted);
       margin-bottom: 40px;
     }
 
-    /* Summary Card */
     .summary-card {
-      background: var(--dark-lighter);
+      background: var(--green-light);
       border-radius: 12px;
       padding: 30px;
       margin-bottom: 50px;
-      border-left: 4px solid var(--primary);
+      border-left: 4px solid var(--green);
       text-align: center;
     }
 
     .summary-card p {
       font-size: 15px;
-      color: #b0d9c0;
+      color: var(--green-dark);
       font-weight: 500;
       line-height: 1.6;
     }
 
-    /* Section */
     .section {
       margin-bottom: 40px;
     }
 
     .section h2 {
-      font-size: 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
       font-weight: 600;
       margin-bottom: 20px;
       padding-left: 15px;
-      border-left: 3px solid var(--primary);
-      color: #fff;
+      border-left: 3px solid var(--green);
+      color: var(--text-dark);
     }
 
     .section p {
       font-size: 14px;
-      color: #a0a0a0;
+      color: var(--text-muted);
       line-height: 1.7;
       margin-bottom: 15px;
     }
@@ -165,10 +179,9 @@
       font-weight: 600;
       margin-top: 20px;
       margin-bottom: 10px;
-      color: #e0e0e0;
+      color: var(--text-dark);
     }
 
-    /* Access Cards */
     .access-grid {
       display: grid;
       gap: 16px;
@@ -176,10 +189,15 @@
     }
 
     .access-card {
-      background: var(--dark-lighter);
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 14px;
       padding: 24px;
-      border: 1px solid #2a4a57;
+      border: 1px solid rgba(46, 204, 155, 0.15);
+      transition: box-shadow 0.3s;
+    }
+
+    .access-card:hover {
+      box-shadow: 0 4px 20px rgba(46, 204, 155, 0.08);
     }
 
     .access-card h3 {
@@ -187,34 +205,33 @@
       font-weight: 600;
       margin-bottom: 10px;
       margin-top: 0;
-      color: var(--primary);
+      color: var(--green-dark);
     }
 
     .access-card p {
       font-size: 13px;
-      color: #a0a0a0;
+      color: var(--text-muted);
       margin-bottom: 10px;
     }
 
     .access-card .scope {
       font-size: 12px;
-      color: #707070;
-      background: rgba(0,0,0,0.3);
+      color: var(--text-muted);
+      background: var(--green-light);
       padding: 8px 12px;
       border-radius: 6px;
       margin-top: 12px;
     }
 
     .access-card .scope strong {
-      color: #909090;
+      color: var(--green-dark);
     }
 
-    /* No Collection List */
     .no-collect {
-      background: var(--dark-lighter);
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 14px;
       padding: 24px;
-      border: 1px solid #2a4a57;
+      border: 1px solid rgba(46, 204, 155, 0.15);
       margin-top: 20px;
     }
 
@@ -229,22 +246,27 @@
       align-items: center;
       gap: 10px;
       font-size: 13px;
-      color: #a0a0a0;
+      color: var(--text-muted);
     }
 
     .no-collect-item::before {
-      content: "✗";
-      color: #555;
+      content: "\2717";
+      color: #ccc;
       font-weight: 600;
     }
 
-    /* Retention Card */
     .retention-card {
-      background: var(--dark-lighter);
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 14px;
       padding: 24px;
-      border: 1px solid #2a4a57;
+      border: 1px solid rgba(46, 204, 155, 0.15);
       margin-top: 20px;
+    }
+
+    .retention-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 15px;
     }
 
     .retention-card ul {
@@ -254,58 +276,73 @@
 
     .retention-card li {
       font-size: 13px;
-      color: #a0a0a0;
+      color: var(--text-muted);
       margin-bottom: 8px;
     }
 
-    /* Contact Card */
+    .retention-card strong {
+      color: var(--text-dark);
+    }
+
     .contact-card {
-      background: var(--dark-lighter);
-      border-radius: 12px;
+      background: var(--dark);
+      border-radius: 16px;
       padding: 30px;
       text-align: center;
       margin-top: 50px;
-      border: 1px solid #2a4a57;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 300px 200px at 20% 50%, rgba(46, 204, 155, 0.08), transparent),
+        radial-gradient(ellipse 250px 150px at 80% 50%, rgba(46, 204, 155, 0.06), transparent);
+      pointer-events: none;
     }
 
     .contact-card h2 {
-      font-size: 18px;
-      font-weight: 600;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
       color: #fff;
       margin-bottom: 12px;
       border: none;
       padding: 0;
+      position: relative;
     }
 
     .contact-card p {
       font-size: 14px;
-      color: #888;
+      color: rgba(250, 248, 245, 0.5);
       margin-bottom: 0;
+      position: relative;
     }
 
     .contact-card a {
-      color: var(--primary);
+      color: var(--green);
     }
 
     .contact-card a:hover {
       text-decoration: underline;
     }
 
-    /* Link styling */
     .page-content a {
-      color: var(--primary);
+      color: var(--green-dark);
     }
 
     .page-content a:hover {
       text-decoration: underline;
     }
 
-    /* Footer */
     footer {
-      background: var(--dark-lighter);
-      color: #fff;
+      background: var(--dark);
+      border-top: 1px solid rgba(46, 204, 155, 0.1);
+      color: var(--text-light);
       padding: 50px 30px;
-      border-top: 1px solid #2a4a57;
     }
 
     .footer-content {
@@ -315,64 +352,39 @@
     }
 
     .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
       font-size: 18px;
       font-weight: 700;
-      color: var(--primary);
+      letter-spacing: 2px;
+      color: var(--green);
       margin-bottom: 22px;
     }
 
-    .footer-nav {
-      margin-bottom: 22px;
-    }
+    .footer-nav { margin-bottom: 22px; }
 
     .footer-nav a {
-      color: #888;
+      color: rgba(250, 248, 245, 0.4);
       margin: 0 14px;
       font-size: 13px;
       font-weight: 500;
       transition: color 0.2s;
     }
 
-    .footer-nav a:hover {
-      color: #fff;
-    }
+    .footer-nav a:hover { color: var(--text-light); }
 
     .footer-copy {
       font-size: 12px;
-      color: #555;
+      color: rgba(250, 248, 245, 0.25);
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
-      .header-content {
-        padding: 15px 20px;
-      }
-
-      .header-nav a {
-        margin-left: 18px;
-        font-size: 12px;
-      }
-
-      .breadcrumb-bar {
-        padding: 14px 20px;
-      }
-
-      .page-content {
-        padding: 40px 20px 60px;
-      }
-
-      .page-title {
-        font-size: 26px;
-      }
-
-      .no-collect-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-nav a {
-        display: block;
-        margin: 10px 0;
-      }
+      .header-content { padding: 15px 20px; }
+      .header-nav a { margin-left: 18px; font-size: 12px; }
+      .breadcrumb-bar { padding: 14px 20px; }
+      .page-content { padding: 40px 20px 60px; }
+      .page-title { font-size: 28px; }
+      .no-collect-grid { grid-template-columns: 1fr; }
+      .footer-nav a { display: block; margin: 10px 0; }
     }
   </style>
 </head>
@@ -380,11 +392,15 @@
 <body>
   <header>
     <div class="header-content">
-      <a href="index.html" class="logo">Thesis Editor</a>
+      <a href="index.html" class="logo">
+        <span class="mark">TH<span class="cursor">▌</span></span>
+        <span class="full-name">THESIS EDITOR</span>
+      </a>
       <nav class="header-nav">
-        <a href="index.html">Home</a>
         <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
         <a href="support.html">Support</a>
+        <a href="collection.html">Collection</a>
       </nav>
     </div>
   </header>
@@ -392,7 +408,7 @@
   <div class="breadcrumb-bar">
     <div class="breadcrumb-content">
       <a href="index.html">Home</a>
-      <span class="separator">-></span>
+      <span class="separator">&rarr;</span>
       <span class="current">Privacy Policy</span>
     </div>
   </div>
@@ -513,14 +529,14 @@
 
   <footer>
     <div class="footer-content">
-      <div class="footer-logo">Thesis Editor</div>
+      <div class="footer-logo">THESIS EDITOR</div>
       <nav class="footer-nav">
-        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </nav>
-      <p class="footer-copy">© 2026 Thesis Editor. Made for academics.</p>
+      <p class="footer-copy">&copy; 2025 Thesis Editor. Made for academics.</p>
     </div>
   </footer>
 </body>
